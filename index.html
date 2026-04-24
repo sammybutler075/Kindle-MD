@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="styles/style.css">
+    <title>kindle.md</title>
+</head>
+<body>
+
+<div id="login" class="modal" >
+    <div class="tab">
+        <button id="login-tab" class="tablinks" >Log In</button>
+        <button id="signup-tab" class="tablinks" >Sign Up</button>
+        <button id="logout-tab" class="tablinks" >Sign Out</button>
+    </div>
+
+    <div id="tab-login" class="tabcontent" style="display:block">
+        <input id="email-l" type="email" placeholder="email">
+        <input id="password-l" type="password" placeholder="password">
+        <button id="loginsub-btn">Log In</button>
+    </div>
+
+    <div id="tab-signup" class="tabcontent">
+        <input id="email" type="email" placeholder="email">
+        <input id="password" type="password" placeholder="password">
+        <button id="submit-btn">Sign Up</button>
+    </div>
+
+    <div id="tab-signout" class="tabcontent">
+        <p style="color: black;">Are you Sure?</p> <br/>
+        <button id="signout-btn">Sign Out</button>
+    </div>
+</div>
+
+<<div id="new-doc-modal" class="modal" style="display:none;">
+  <input id="new-doc-input" type="text" placeholder="Document name..." >
+  <div id="button-flow">
+    <button id="new-doc-cancel" >Cancel</button>
+    <button id="new-doc-confirm" >Create</button>
+  </div>
+</div>
+   
+
+
+<div id='header'>
+        <button class="nav-toggle"></button>
+
+    <btn id="userpill" onclick="showLogin()">  
+<div class="userpill" >
+       
+        <p> Login</p> 
+
+</div>
+    </btn>
+
+
+        <button id="delete-btn">󰆴</button>
+        <button id="edit-btn" onclick="toggleEdit()">󰏫</button>
+</div>
+<div id="navigation">
+  <button id="new-btn">+</button>
+</div>
+
+<div id="box">
+
+ 
+    
+</div>
+
+
+
+<script src="lib/firebase-app-compat.js"></script>
+<script src="lib/firebase-auth-compat.js"></script>
+<script src="lib/firebase-firestore-compat.js"></script>
+   <script src="lib/marked.min.js"></script>
+<script src="scripts/firebase.js"></script>
+ 
+</body>
+
+</html>

@@ -71,7 +71,6 @@ function subSignup() {
     firebase.auth().createUserWithEmailAndPassword(email, password)
         .then(function () {
             alert('Account created')
-            signupBox.classList.remove('active')
         })
         .catch(function (err) {
             alert(err.message)

@@ -23,6 +23,9 @@ var editBtn = document.getElementById('edit-btn')
 var loginTab = document.getElementById('login-tab')
 var signupTab = document.getElementById('signup-tab')
 var logoutTab = document.getElementById('logout-tab')
+var loginErr = document.getElementById('login-err')
+var signupErr = document.getElementById('signup-err')
+var signoutErr = document.getElementById('singout-err')
 
 var currentUser = null
 var currentDoc = null
@@ -73,7 +76,7 @@ function subSignup() {
             alert('Account created')
         })
         .catch(function (err) {
-            alert(err.message)
+            signupErr.textContent = (err.message)
         })
 }
 
@@ -93,7 +96,7 @@ function subLogin() {
             showLogin()
         })
         .catch(function (err) {
-            alert(err.message)
+            loginErr.textContent = (err.message)
         })
 }
 
@@ -115,6 +118,9 @@ firebase.auth().onAuthStateChanged(function (user) {
 function logout() {
         firebase.auth().signOut().then(function () {
         location.reload()
+             .catch(function (err) {
+            signoutErr.textContent = (err.message)
+        })
     })
 }
 
